@@ -1,0 +1,15 @@
+.tile-card {
+    width: 200px;
+    height: 200px;
+    margin:15px;
+  }
+  
+  .tile-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  
+  .tile-text{
+    overflow: auto;
+    height: 110px;
+  }

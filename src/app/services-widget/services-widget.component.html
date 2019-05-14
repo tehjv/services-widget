@@ -1,0 +1,34 @@
+<mat-accordion>
+
+  <!-- <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        This is the expansion 1 title
+      </mat-expansion-panel-header>
+  
+      This the expansion 1 content
+  
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        This is the expansion 2 title
+      </mat-expansion-panel-header>
+  
+      This the expansion 2 content
+  
+    </mat-expansion-panel> -->
+
+  <mat-expansion-panel *ngFor="let category of categories">
+    <mat-expansion-panel-header>
+      {{category}}
+    </mat-expansion-panel-header>
+      <div *ngIf="category==='All';else specificGroup" class="card-holder">
+        <div *ngFor="let serviceConfig of servicesConfig">
+          <app-service-tile [tileConfig]=serviceConfig></app-service-tile>
+        </div>
+      </div>
+      <ng-template #specificGroup>NOT ALL</ng-template>
+  </mat-expansion-panel>
+
+
+</mat-accordion>
